@@ -1,0 +1,46 @@
+{
+  "name": "webrtc2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "~1.18.2",
+    "connect": "^3.6.5",
+    "connect-mongo": "^2.0.0",
+    "cookie": "^0.3.1",
+    "cookie-parser": "~1.4.3",
+    "crypto": "^1.0.1",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "ejs-locals": "^1.0.2",
+    "express": "~4.15.5",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.13.1",
+    "morgan": "~1.9.0",
+    "nconf": "^0.9.1",
+    "node-sass": "^4.11.0",
+    "serve-favicon": "~2.4.5",
+    "socket.io": "^2.0.4",
+    "winston": "^2.4.0"
+  },
+  "main": "app.js",
+  "author": "Leonid Serdiuk",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "imagemin-pngquant": "^5.0.1",
+    "rimraf": "^2.6.2"
+  }
+}

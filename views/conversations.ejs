@@ -1,0 +1,11 @@
+<% layout('layouts/main') -%>
+<% block('title', 'My Conversations') -%>
+<%- partial('includes/header') %>
+<div class="container-fluid vertical-align">
+    <div class="container with-vertical-padding text-center">
+        <form method="post" action="/logout">
+            <input class="btn btn-default" type="submit" value="Logout">
+        </form>
+    </div>
+</div>
+<%- partial('includes/footer') %>

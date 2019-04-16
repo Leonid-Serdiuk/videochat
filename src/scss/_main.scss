@@ -1,0 +1,208 @@
+$font-stack: "Lucida Grande", Helvetica, Arial, sans-serif;
+$header-color: #f6f6f6;
+
+$gradientFirst: #002449;
+$gradientMiddle: #006987;
+$gradientLast: #0097b2;
+
+@mixin background-gradient() {
+  background: $gradientMiddle;
+  background: -moz-linear-gradient(top, $gradientFirst 0%, $gradientMiddle 50%, $gradientLast 100%);
+  background: -webkit-linear-gradient(top, $gradientFirst 0%,$gradientMiddle 50%,$gradientLast 100%);
+  background: linear-gradient(to bottom, $gradientFirst 0%,$gradientMiddle 50%,$gradientLast 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradientFirst', endColorstr='$gradientLast',GradientType=0 );
+}
+
+@mixin background-gradient-flip() {
+  background: $gradientMiddle;
+  background: -moz-linear-gradient(top, $gradientLast 0%, $gradientMiddle 50%, $gradientFirst 100%);
+  background: -webkit-linear-gradient(top, $gradientLast 0%,$gradientMiddle 50%,$gradientFirst 100%);
+  background: linear-gradient(to bottom, $gradientLast 0%,$gradientMiddle 50%,$gradientFirst 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradientLast', endColorstr='$gradientFirst',GradientType=0 );
+}
+
+@mixin active-button() {
+  box-shadow: inset 0px 0px 3px 0px #000;
+}
+
+@mixin vertical-align() {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: flex;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1.5;
+  font: 1em $font-stack;
+  position: relative;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.btn-default {
+  background: transparent;
+  color: inherit;
+  border-color: inherit;
+}
+
+.btn {
+  font-size: 1em;
+}
+
+.btn:active, .btn:focus, .btn:active:focus {
+  background: transparent;
+  color: inherit;
+  border-color: inherit;
+  outline: none;
+}
+
+.btn:hover, .navbar-default .navbar-nav>li>a:hover, .navbar-toggle:hover {
+  background-color: rgba(255,255,255, 0.1);
+  color: inherit;
+  border-color: inherit;
+}
+
+.btn.active, .btn:active {
+  @include active-button();
+}
+
+.with-vertical-padding {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default {
+  background: transparent;
+}
+
+.navbar-default .navbar-toggle:active {
+  @include active-button();
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+  color: inherit;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color:$header-color;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: inherit;
+}
+
+.navbar-nav>li {
+  padding: 5px 10px;
+}
+
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar {
+  border-radius: 0px;
+  border: none;
+}
+
+
+.vertical-align {
+  min-height: 200px;
+  @include vertical-align();
+}
+
+.bg-colorfull {
+  background: #006987;
+  color: $header-color;
+
+  & .btn {
+    border-color: $header-color;
+  }
+
+  &.gradient {
+    @include background-gradient();
+  }
+
+  &.gradient-flip {
+    @include background-gradient-flip();
+  }
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.error-block {
+  display: none;
+}
+
+#regiter_form {
+  display: none;
+}
+
+.chat-message {
+  color: green;
+}
+
+.system-message {
+  color: #1b6d85;
+}
+
+.profile-photo-wrapper {
+  margin-bottom: 2rem;
+}
+
+/* Panel Primary */
+.panel-primary {
+  border-color: $gradientFirst;
+
+  & > .panel-heading {
+    @include background-gradient();
+  }
+}
+/* .Panel Primary*/
+
+img.img-responsive {
+  display: inline-block;
+}
+
+@media (max-width: 992px) {
+  .col-xs-12 .text-right, .col-xs-12 .text-left, .col-sm-12 .text-right, .col-sm-12 .text-left {
+    text-align: center;
+  }
+}

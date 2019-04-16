@@ -1,0 +1,53 @@
+<% layout('layouts/main') -%>
+<% block('title', 'My Profile') -%>
+<% script('/js/editprofile.js') -%>
+<%- partial('includes/header') %>
+<div class="container-fluid vertical-align">
+    <div class="container with-vertical-padding text-center">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2 class="panel-title">My Profile</h2>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 col-sm-12 col-xs-12">
+                        <div class="profile-photo-wrapper text-left">
+                            <img class="img-responsive img-rounded" src="https://lh6.googleusercontent.com/-LGeXIykfsjA/AAAAAAAAAAI/AAAAAAAAAqA/LjxTjoo0oc4/photo.jpg?sz=328">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+                        <div class=" text-left">
+                            <table class="table table-responsive">
+                                <tr>
+                                    <td class="col-xs-3">Name: </td>
+                                    <td><div class="editable" data-name="name"><%= user.name %></div></td>
+                                    <td class="col-xs-1 text-center"><a class="edit-field" href="javasript:void(0);"><i class="glyphicon glyphicon-edit"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Email: </td>
+                                    <td><div class="editable" data-name="email"><%= user.email %></div></td>
+                                    <td class="text-center"><a class="edit-field" href="javasript:void(0);"><i class="glyphicon glyphicon-edit"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>About: </td>
+                                    <td>
+                                        <div class="editable editable-textarea" data-name="about"><%= user.about %></div>
+                                    </td>
+                                    <td class="text-center"><a class="edit-field" href="javasript:void(0);"><i class="glyphicon glyphicon-edit"></i></a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-lg-3">
+                        <form method="post" action="/logout">
+                            <input class="btn btn-default" type="submit" value="Logout">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- partial('includes/footer') %>

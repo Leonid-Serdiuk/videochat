@@ -1,0 +1,78 @@
+<% layout('layouts/main') -%>
+<% block('title', title) -%>
+<%- partial('includes/header') %>
+<div class="container-fluid vertical-align">
+    <div class="container with-vertical-padding">
+        <h1 class="text-center">Login SkyOrbis Videochat</h1>
+        <h3 class="text-center"><a id="login-link" href="#login">Login</a> or <a id="regiter-link" href="#register">Regiter</a></h3>
+        <!-- Login Form -->
+        <div class="error-block alert alert-danger"></div>
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form id="login_form" action="/login" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="login_email" class="col-sm-4 control-label">Email</label>
+                            <div class="col-sm-8">
+                                <input type="email" name="email" class="form-control" id="login_email" placeholder="Email" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="login_password" class="col-sm-4 control-label">Password</label>
+                            <div class="col-sm-8">
+                                <input type="password" name="password" class="form-control" id="login_password" placeholder="Password" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-8">
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-default">Login</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form id="regiter_form" action="/register" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="regiter_name" class="col-sm-4 control-label">Your name:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="name" class="form-control" id="regiter_name" placeholder="Name" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regiter_email" class="col-sm-4 control-label">Email:</label>
+                            <div class="col-sm-8">
+                                <input type="email" name="email" class="form-control" id="regiter_email" placeholder="Email" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regiter_password" class="col-sm-4 control-label">Password:</label>
+                            <div class="col-sm-8">
+                                <input type="password" name="password" class="form-control" id="regiter_password" placeholder="Password" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="regiter_confirm_password" class="col-sm-4 control-label">Confirm Password:</label>
+                            <div class="col-sm-8">
+                                <input type="password" name="confirm_password" class="form-control" id="regiter_confirm_password" placeholder="Password Again" required="required">
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-default">Regiter</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- partial('includes/footer') %>

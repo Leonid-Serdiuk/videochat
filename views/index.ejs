@@ -1,0 +1,90 @@
+<% layout('layouts/main') -%>
+<% block('title', 'SkyOrbis') -%>
+<%- partial('includes/header') %>
+<div class="container-fluid vertical-align">
+    <div class="container with-vertical-padding text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <img src="img/Videochat.gif">
+                </div>
+            </div>
+            <div class="col-md-6 text-left">
+                <p>
+                    You can try our video chat by using Quick Chat button.
+                </p>
+                <p>
+                    Then you click the button a videochat room will be created
+                    and You will be able to share url of the room with people
+                    You want to talk.
+                </p>
+                <p>
+                    You can share link with Facebook, send email or copy the link
+                    and share it by any other way.
+                </p>
+                <div class="text-center">
+                    <a href="#" class="btn btn-default">Quick Chat</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="registration_block" class="container-fluid bg-colorfull vertical-align">
+    <div class="container with-vertical-padding">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">
+                    Registration
+                </h2>
+                <p>
+                    Regiter now and you'll be able to:
+                    <ul>
+                        <li>
+                            Manage Your Profile
+                        </li>
+                        <li>
+                            Make Conferences
+                        </li>
+                        <li>
+                            Manage Your Contacts
+                        </li>
+                        <li>
+                            See Chat History
+                        </li>
+                    </ul>
+                    And match more.
+                </p>
+            </div>
+            <div class="col-md-6 text-left">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="comfirm_password">Confirm Password:</label>
+                        <input type="password" id="confirm_password" class="form-control">
+                    </div>
+                    <input type="submit" value="Register" class="btn btn-default"> <a href="#">I have an account</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid vertical-align">
+    <div class="container with-vertical-padding text-center">
+        <div class="row">
+            <div class="col-md-6">Some Usefull Information</div>
+            <div class="col-md-6">Interesting gif animation may be</div>
+        </div>
+    </div>
+</div>
+<%- partial('includes/footer') %>

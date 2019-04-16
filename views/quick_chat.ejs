@@ -1,0 +1,59 @@
+<% layout('layouts/main') -%>
+<% block('title', 'Quick Chat - SkyOrbis') %>
+<% script('/socket.io/socket.io.js') -%>
+<% script('/js/video_chat.js') -%>
+
+<div id="room">
+    <div id="toolback"></div>
+    <div id="toolbar">
+        <ul class="tools list-inline">
+            <li><a href="/" class="end_chat" data-toggle="tooltip" data-placement="bottom" title="End video chat"><i class="fas fa-phone"></i></a></li>
+            <li class="separator"></li>
+            <li><a href="#" id="disable_videocamera" class="video_icon" data-target="" data-toggle="tooltip" data-placement="bottom" title="Disable video camera"><i class="fas fa-video"></i></a></li>
+            <li><a href="#" id="disable_microphone" class="micro_icon" data-target="" data-toggle="tooltip" data-placement="bottom" title="Disable microphone"><i class="fas fa-microphone"></i></a></li>
+            <li class="separator"></li>
+            <li><a href="#" class="conv_tool chat_icon" data-target=".text-chat" data-toggle="tooltip" data-placement="bottom" title="Show/Hide Text Chat"><i class="fas fa-comments"></i></a></li>
+            <li><a href="#" class="conv_tool self_icon" data-target=".self-video" data-toggle="tooltip" data-placement="bottom" title="Show/Hide Self Video block"><i class="fas fa-user"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="text-chat">
+        <div class="text-chat-header">Text Chat</div>
+        <ul class="text-chat-messages"></ul>
+        <form>
+            <input class="form-control" autocomplete="off" autofocus placeholder="Message...">
+        </form>
+    </div>
+    <div class="remote-video">
+        <span class="audio-muted" data-toggle="tooltip" data-placement="right" title="The interlocutor is mute"><i class="fas fa-volume-off"></i></span>
+        <video autoplay id="remoteVideo"></video>
+    </div>
+    <div class="self-video">
+        <video autoplay muted id="localVideo"></video>
+    </div>
+    <div id="main">
+        <div id="shareSection" class="text-center">
+            <h2>Invite an Interlocutor</h2>
+            <ul class="share-options list-inline">
+                <li><a href="#">
+                        <i class="fas fa-at"></i><br>
+                        <span>Email</span></a>
+                </li>
+                <li><a href="#">
+                        <i class="fab fa-facebook"></i><br>
+                        <span>Facebook</span></a>
+                </li>
+                <li><a href="#" id="copy_to_clipboard" data-toggle="tooltip" data-placement="bottom" title="Copy this room link">
+                        <i class="fas fa-copy"></i><br>
+                        <span>Link</span></a>
+                    <input id="hidden_text_input" type="text" style="position: absolute; left:-99999999px" value="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="alert_message">Hello world! Lorem ipum dolor sit amet</div>
+</div>
+
+<script>
+
+</script>

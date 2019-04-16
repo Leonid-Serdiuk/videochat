@@ -1,0 +1,9 @@
+<% layout('layouts/main') -%>
+<% block('title', error.message) -%>
+<%- partial('includes/header') %>
+<div class="container-fluid vertical-align">
+    <div class="container with-vertical-padding text-center">
+        <p><%= error.message %></p>
+    </div>
+</div>
+<%- partial('includes/footer') %>
